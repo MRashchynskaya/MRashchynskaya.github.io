@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>banner_seo</title>
+
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="banner.js"></script>
+<script>
+var canvas, stage, exportRoot;
+function init() {
+	canvas = document.getElementById("canvas");
+	exportRoot = new lib._100x100_seo();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+	stage.enableMouseOver();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+
+</script>
+</head>
+<body onload="init();" style="background-color:#FFFFFF;margin:0px;">
+	<div style="height:100px; position: relative; overflow: hidden;"><canvas id="canvas" width="1920" height="100" style="background-color: #E9D966;position: absolute; top: 0; left: 50%; margin-left:-960px;"></canvas></div>
+</body>
+</html>

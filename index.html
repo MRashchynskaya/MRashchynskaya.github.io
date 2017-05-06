@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salmon Media</title>
+		<link rel="stylesheet" href="css/stylereset.css"/>
+		<link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/player.css">
+        <link rel="stylesheet" href="css/juma-quiz.css">  
+        <link rel="stylesheet" href="css/preloader.css">            
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <script src="js/jquery-2.2.4.js"></script>
+        <script src="js/preloader.js"></script>
+        <script src="js/Chart.js"></script>
+        <script src="js/Chart.bundle.js"></script>
+        <script src="js/mychart.js"></script>
+        <script src="js/jquery.juma-quiz.js"></script>
+        <script src="js/player.js"></script>
+        <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+		<script src="banner/banner.js"></script>
+
+</head>
+<body onload="hideloader()">
+            <!-- PRELOADER BEGIN -->
+<div id="loading"></div>
+			<!-- PRELOADER END -->
+    <div class="wrapper">
+                <!-- BANNER BEGIN -->
+<iframe src="banner/banner.html" width="1004px"  height="100px"></iframe>
+            <!-- PRELOADER END -->
+      <header class="main-header">
+            <div class="logo">
+            </div>
+            <div class="name bounceIn animated" >
+                <h1><span class="salmon">SALMON</span> MEDIA</h1>
+                <h3>МЫ СОЗДАЕМ БУДУЩЕЕ</h3>
+            </div>
+            <div class="btn-social">
+                <a href="https://www.facebook.com/"><i class="fa-facebook fa-lg"></i></a>
+                <a href="https://vk.com/feed"><i class="fa-vk fa-lg"></i></a>
+                <a href="https://twitter.com/"><i class="fa-twitter fa-lg"></i></a>
+            </div>
+      </header>
+      <div class="content">
+            <div class="about">
+                <h3><span class="header-underline">КТО МЫ ТАКИЕ?</span></h3>
+                <p>
+                    Мы считаем, что самого искреннего доверия заказчика можно
+                    добиться лишь защищая его дело! И, следуя пути
+                    постоянного улучшения качества услуг, воспитывая сильных
+                    специалистов, мы создаем прочные партнерские
+                    взаимоотношения.
+                </p>
+            </div>
+            <div class="service">
+                    <div class="box box_work">
+    					<div class="inner">
+                            <h3><a href="#">ЧТО МЫ<br> ДЕЛАЕМ?</a></h3>
+                            <p><a href="#">Наше агентство предлагает следующие виды услуг</a></p>
+    					</div>
+                    </div>
+
+                    <div class="box box_analyze">
+    					<div class="inner">
+                        <h3><a href="#">АНАЛИЗ</a></h3>
+                        <p><a href="#">Контент-анализ рекламы на соответствия основным требованиям кампании</a></p>
+    					</div>	
+                    </div>
+
+                    <div class="box box_plan">
+    				    <div class="inner">
+                            <h3><a href="#">ПЛАНИРОВАНИЕ</a></h3>
+                            <p><a href="#">Разрабатываем концепции продвижения торговой марки в
+                                рекламной кампании</a></p>
+    					</div>
+                    </div>
+
+                    <div class="box box_place">
+        				<div class="inner">
+                            <h3><a href="#">Галлерея</a></h3>
+                            <p><a href="#">Мы ориентированы на самые современные технологии
+                                рекламы товаров и услуг</a></p>
+        				</div>	
+                    </div>
+            </div>
+		</div>
+        
+            <!-- CHART BEGIN -->
+    <h1>Рекламные затраты</h1>
+	<canvas id="myChart" width="400" height="200"></canvas>
+	<script>
+	Chart.defaults.global.responsive = true;
+var ctx = document.getElementById("myChart");
+var data = {
+    labels: ["TV", "Internet", "OOH", "Radio", "Print"],
+    datasets: [
+        {
+            label: "Рекламные затраты в 2015 г., млн. USD",
+            backgroundColor: "rgba(120, 133, 133, 0.86)",
+            borderColor: "rgba(120, 133, 133, 1)",
+            borderWidth: 1,
+            hoverBackgroundColor: "rgba(204, 218, 209, 0.65)",
+            hoverBorderColor: "rgba(204, 218, 209, 1)",
+            data: [38, 17.55, 13.84, 6.49, 8],
+            yAxisID: "y-axis-0",
+        }
+    ]
+};
+	    var myChart = new Chart(ctx, {
+	    type: 'bar',
+	    data: data,
+	    options: {
+	        scales: {
+	            yAxes: [{
+	                ticks: {
+	                    beginAtZero:true
+	                }
+	            }]
+	        }
+	    }
+	});
+	</script>
+            <!-- CHART END -->
+
+            <!-- QUIZ BEGIN -->
+
+<div class="juma-quiz">
+            <h1>Тест: определение типа рекламной кампании</h1>
+        <ol id="js--my-quiz">
+            <li>
+                <h3 id="acc--question-one">Определите "возраст" продукта.</h3>
+                <ul>
+                    <li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-one" data-points="1">1 - 3 года и более;</li>
+                    <li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-one" data-points="2">2  - 1-2 года;</li>
+                    <li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-one" data-points="3">3 - новый продукт.</li>
+                </ul>
+            </li>
+            <li>
+                <h3 id="acc--question-two">Как много конкурентов рекламируется?</h3>
+                <ul>
+                    <li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-two" data-points="1">1 - не более 2х;</li>
+                    <li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-two" data-points="2">2 - 3-5;</li>
+                    <li trole="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-two" data-points="3">3 - 6 и более.</li>
+                </ul>
+            </li>
+
+            <li>
+                <h3 id="acc--question-three">Размещали ли рекламу раньше?</h3>
+                <ul>
+                    <li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-three" data-points="1">1 - размещали 1-5 мес. назад;</li>
+                    <li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-three" data-points="2">2 - более 6 мес. назад;</li>
+                    <li trole="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-three" data-points="3">3 - не размещали.</li>
+                </ul>
+            </li>
+            <li>
+                <h3 id="acc--question-four">Простое или сложное рекламное сообщение?</h3>
+                <ul>
+                    <li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-four" data-points="1">1 - простое (одно УТП, один слоган);</li>
+                    <li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-four" data-points="2">2 - несколько преимуществ, больше текста;</li>
+                    <li trole="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-four" data-points="3">3 - необходимо детально рассказать о продукте.</li>
+                </ul>
+            </li>
+            <li>
+                <h3 id="acc--question-five">Определите размер целевой аудитории</h3>
+                <ul>
+                    <li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-five" data-points="1">1 - ограниченная ЦА (узкая группа, или один город);</li>
+                    <li role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-five" data-points="2">2 - более широкая ЦА;</li>
+                    <li trole="checkbox" tabindex="0" aria-checked="false" aria-labelledby="acc--question-five" data-points="3">3 - максимально широкая (все женщины и т.п.)</li>
+                </ul>
+            </li>
+        </ol>
+        <ul class="juma-score">
+            <li data-points="8">
+                <h3>Ваш тип кампании: "Нишевая" или "поддерживающая" РК.</h3>
+                <p>Эффективная частота от 1+ до 3+. 1-3 медиа канала, использование ТВ не обязательно.</p>
+            </li>
+            <li data-points="10">
+                <h3>Ваш тип кампании: "Средняя" кампания.</h3>
+                <p>Эффективная частота от 3+ до 4+. 1-4 медиа канала, из них хотя бы один охватный (ТВ, наружная реклама или Интернет). Период - минимум месяц.</p>
+            </li>
+            <li data-points="15">
+                <h3>"Интенсивная" кампания или "лонч".</h3>
+                <p>Эффективная частота не менее 5+. Не менее 2-х медиа каналов, ТВ обязательно. Период - минимум 7 недель.</p>
+            </li>
+        </ul>
+    </div>
+    <script>
+    $(function(){
+        $('body').jumaQuiz({
+            container: 'js--my-quiz',
+            progress: true
+        });
+    });
+    </script>
+                <!-- QUIZ END -->
+                <!-- PLAYER BEGIN -->
+    <h1>Примеры рекламных аудиороликов</h1>
+    <div class="player">
+        <audio id="audio" preload="auto" tabindex="0" controls="" type="audio/mpeg">
+        <source type="audio/mp3" src="mp3/pskov-line-dmitr.mp3">
+        Sorry, your browser does not support HTML5 audio.
+    </div>
+    </audio>
+    <div class="player">
+	    <ul id="playlist">
+	        <li class="active"><a href="mp3/pskov-line-dmitr.mp3">1. Интернет телевидение Псковлайн (Дмиртиев Артем)</a></li>
+	        <li><a href="mp3/VolgaTelecom-J-elka.mp3">2. J тариф Елка (Купряшин и Клименко)</a></li>
+	        <li><a href="mp3/smarts.mp3">3. СМАРТС (Артем Дмитриев)</a></li>
+	        <li><a href="mp3/MTV-Wihte-Party.mp3">4. MTV White Party (Геллер Анна)</a></li>
+	    </ul>
+    </div>
+                <!-- PLAYER END -->
+
+        <div class="contacts">
+               <div class="card">
+                    <div class="icons icon-tel"></div>
+                    <p class="text-contacts">
+                            +375 (555) 123-45-67<br>
+                            +375 (555) 890-12-34
+                        </p>
+                    </div>
+                <div class="card">
+                    <div class="icons icon-mail"></div>
+                    <p class="text-contacts">info@salmon.media</p>
+                    </div>
+                <div class="card">
+                    <div class="icons icon-adress"></div>
+                    <p class="text-contacts">
+                            г. Минск<br>
+                            ул. Кого-то 28
+                        </p>
+                    </div>
+                <div class="map"></div>
+				<a href="#top" class="idTop"> <img src="img/up-icon.png" height="40px"></a> 
+            </div>
+
+        <footer class="main-footer clearfix">
+                       <div class="col">
+					   <h3><img class="footer-logo" src="img/logo.png" alt="Logo SM">
+                    <span class="salmon">SALMON</span> MEDIA
+                </h3>
+            </div>
+            <div class="col">
+                <p class="copy">
+                    webdesign by<br>
+                    Rashchynskaya Margarita, 2016
+                </p>
+            </div>
+        </footer>
+    </div>
+ 
+</div>
+</div>
+
+</body>
+</html>
